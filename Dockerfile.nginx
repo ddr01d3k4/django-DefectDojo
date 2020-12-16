@@ -64,7 +64,7 @@ RUN \
   python3 manage.py collectstatic --noinput && \
   true
 
-FROM nginx:1.19.2-alpine@sha256:4635b632d2aaf8c37c8a1cf76a1f96d11b899f74caa2c6946ea56d0a5af02c0c
+FROM nginx:1.19.6-alpine@sha256:69286bc97490a90a3dbbc2a8f6e734336f929f92b8627ad3102c411cc9bcb820
 COPY --from=collectstatic /app/static/ /usr/share/nginx/html/static/
 COPY wsgi_params nginx/nginx.conf nginx/nginx_TLS.conf /etc/nginx/
 COPY docker/entrypoint-nginx.sh /
