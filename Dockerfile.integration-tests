@@ -1,7 +1,7 @@
 
 # code: language=Dockerfile
 
-FROM python:3.8.5-slim-buster@sha256:282fc7428f74cf3317d78224349b9215f266fc9cb4197cce58dad775cb565ed3 as build
+FROM python:3.10.1-slim-buster@sha256:d4354e51d606b0cf335fca22714bd599eef74ddc5778de31c64f1f73941008a4 as build
 WORKDIR /app
 RUN \
   apt-get -y update && \
